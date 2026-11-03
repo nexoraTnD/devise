@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/keyboard_bg">
+    <LinearLayout android:id="@+id/displayPanel" android:layout_width="0dp" android:layout_height="0dp" android:orientation="vertical" android:padding="18dp" android:background="@color/turquoise" app:layout_constraintHeight_percent="0.48" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <TextView android:id="@+id/tvTitre" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/title" android:textColor="@color/white" android:textSize="20sp" android:gravity="center" android:paddingBottom="8dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center_vertical" android:orientation="horizontal">
+            <Spinner android:id="@+id/spDeviseSource" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:contentDescription="Devise source"/>
+            <TextView android:id="@+id/tvMontant" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="0" android:textColor="@color/white" android:textSize="48sp" android:gravity="end" android:maxLines="1" android:ellipsize="start" android:includeFontPadding="false"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:gravity="center_vertical" android:orientation="horizontal">
+            <Spinner android:id="@+id/spDeviseCible" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:contentDescription="Devise cible"/>
+            <TextView android:id="@+id/tvResultat" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="2" android:text="" android:textColor="@color/white" android:textSize="42sp" android:gravity="end" android:maxLines="1" android:ellipsize="start"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center">
+            <ImageButton android:id="@+id/btnInverser" android:layout_width="52dp" android:layout_height="48dp" android:src="@android:drawable/ic_menu_revert" android:contentDescription="@string/swap_description" android:background="?android:attr/selectableItemBackgroundBorderless" android:tint="@color/white"/>
+            <Button android:id="@+id/btnConvertir" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/convert"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TableLayout android:id="@+id/numericKeypad" android:layout_width="0dp" android:layout_height="0dp" android:padding="12dp" android:stretchColumns="*" app:layout_constraintTop_toBottomOf="@id/displayPanel" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        <TableRow android:layout_weight="1"><Button android:id="@+id/key7" style="@style/NumberKey" android:text="7"/><Button android:id="@+id/key8" style="@style/NumberKey" android:text="8"/><Button android:id="@+id/key9" style="@style/NumberKey" android:text="9"/></TableRow>
+        <TableRow android:layout_weight="1"><Button android:id="@+id/key4" style="@style/NumberKey" android:text="4"/><Button android:id="@+id/key5" style="@style/NumberKey" android:text="5"/><Button android:id="@+id/key6" style="@style/NumberKey" android:text="6"/></TableRow>
+        <TableRow android:layout_weight="1"><Button android:id="@+id/key1" style="@style/NumberKey" android:text="1"/><Button android:id="@+id/key2" style="@style/NumberKey" android:text="2"/><Button android:id="@+id/key3" style="@style/NumberKey" android:text="3"/></TableRow>
+        <TableRow android:layout_weight="1"><Button android:id="@+id/keyClear" style="@style/NumberKey" android:text="C" android:textColor="@color/clear_red"/><Button android:id="@+id/key0" style="@style/NumberKey" android:text="0"/><Button android:id="@+id/keyDecimal" style="@style/NumberKey" android:text="."/></TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

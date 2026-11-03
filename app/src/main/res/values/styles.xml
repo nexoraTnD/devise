@@ -1,0 +1,1 @@
+<resources><style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar"><item name="colorAccent">@color/turquoise</item><item name="android:statusBarColor">@color/turquoise</item><item name="android:navigationBarColor">@color/keyboard_bg</item><item name="android:windowLightNavigationBar">true</item></style></resources>
